@@ -13,6 +13,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.Font;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 public class WindowHome extends JFrame {
 
@@ -67,7 +68,7 @@ public class WindowHome extends JFrame {
 		PanelHome.add(lblNewLabel, BorderLayout.SOUTH);
 		
 		JLabel lblNewLabel_1 = new JLabel("¡Bienvenido/a al ConverterFull!");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		PanelHome.add(lblNewLabel_1, BorderLayout.CENTER);
 	}
