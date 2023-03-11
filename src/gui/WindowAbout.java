@@ -16,7 +16,7 @@ import java.awt.FlowLayout;
 import javax.swing.JSeparator;
 import java.awt.Toolkit;
 
-public class WindowHelp extends JFrame {
+public class WindowAbout extends JFrame {
 
 	private JPanel PanelHelp;
 
@@ -27,7 +27,7 @@ public class WindowHelp extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					WindowHelp frame = new WindowHelp();
+					WindowAbout frame = new WindowAbout();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,8 +39,8 @@ public class WindowHelp extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public WindowHelp() {
-		setTitle("ConverterFull - Inicio/Acerca de");
+	public WindowAbout() {
+		setTitle("ConverterONE - Inicio/Acerca de");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("D:\\eclipse-workspace\\converter\\src\\imgs\\converter.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
@@ -50,9 +50,6 @@ public class WindowHelp extends JFrame {
 
 		JMenu mnNewMenu = new JMenu("Inicio");
 		menuBar.add(mnNewMenu);
-
-		JMenu mnNewMenu_1 = new JMenu("Convertir");
-		menuBar.add(mnNewMenu_1);
 
 		JMenu mnNewMenu_2 = new JMenu("Acerca de");
 		menuBar.add(mnNewMenu_2);

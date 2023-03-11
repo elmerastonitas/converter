@@ -25,4 +25,10 @@
 			</matcher>
 		</filter>
 	</filteredResources>
+	<variableList>
+		<variable>
+			<name>JAVA_JSON</name>
+			<value>file:/D:/eclipse-workspace/converter/java-json.jar</value>
+		</variable>
+	</variableList>
 </projectDescription>
