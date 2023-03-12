@@ -41,6 +41,7 @@ public class WindowLength extends JFrame {
 	 */
 	public WindowLength() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(WindowLength.class.getResource("/imgs/converter.png")));
+		setResizable(false); // deshabilita la maximización
 		setTitle("ConverterONE - Inicio/Convertir Longitud");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);

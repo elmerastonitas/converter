@@ -42,6 +42,7 @@ public class WindowTime extends JFrame {
 	public WindowTime() {
 		setTitle("ConverterONE - Inicio/Convertir Tiempo");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(WindowTime.class.getResource("/imgs/converter.png")));
+		setResizable(false); // deshabilita la maximización
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
 		

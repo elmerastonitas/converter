@@ -15,10 +15,19 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import javax.swing.SwingConstants;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerListModel;
+import java.awt.List;
+import java.awt.Choice;
+import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.JTextPane;
 
 public class WindowCurrency extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -42,6 +51,7 @@ public class WindowCurrency extends JFrame {
 	public WindowCurrency() {
 		setTitle("ConverterONE - Inicio/Convertir Monedas");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(WindowCurrency.class.getResource("/imgs/converter.png")));
+		setResizable(false); // deshabilita la maximización
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
 
@@ -174,6 +184,54 @@ public class WindowCurrency extends JFrame {
 		JLabel lblNewLabel = new JLabel("Powered by Elmer Astonitas");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel, BorderLayout.SOUTH);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		Choice choice = new Choice();
+		choice.setBounds(163, 71, 100, 20);
+		panel.add(choice);
+		
+		Choice choice_1 = new Choice();
+		choice_1.setBounds(330, 71, 100, 20);
+		panel.add(choice_1);
+		
+		textField = new JTextField();
+		textField.setBounds(234, 21, 155, 20);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Cantidad");
+		lblNewLabel_1.setBounds(163, 24, 61, 14);
+		panel.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("De");
+		lblNewLabel_3.setBounds(132, 77, 25, 14);
+		panel.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("A");
+		lblNewLabel_4.setBounds(299, 77, 25, 14);
+		panel.add(lblNewLabel_4);
+		
+		JButton btnNewButton = new JButton("Convertir");
+		btnNewButton.setIcon(new ImageIcon(WindowCurrency.class.getResource("/imgs/convertir.png")));
+		btnNewButton.setBounds(163, 184, 112, 23);
+		panel.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Limpiar");
+		btnNewButton_1.setIcon(new ImageIcon(WindowCurrency.class.getResource("/imgs/borrar.png")));
+		btnNewButton_1.setBounds(300, 184, 112, 23);
+		panel.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_5 = new JLabel("Resultado");
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5.setBounds(188, 125, 201, 32);
+		panel.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_2 = new JLabel("<html><body><br>\r\n<h3>Convertir monedas</h3>\r\n<br>\r\n</body></html>");
+		contentPane.add(lblNewLabel_2, BorderLayout.NORTH);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 	}
-
 }

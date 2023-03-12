@@ -45,6 +45,7 @@ public class WindowHome extends JFrame {
 	public WindowHome() {
 		setTitle("ConverterONE - Inicio/Convertir");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(WindowHome.class.getResource("/imgs/converter.png")));
+		setResizable(false); // deshabilita la maximización
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
 		

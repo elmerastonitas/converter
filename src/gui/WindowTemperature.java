@@ -41,6 +41,7 @@ public class WindowTemperature extends JFrame {
 	 */
 	public WindowTemperature() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(WindowTemperature.class.getResource("/imgs/converter.png")));
+		setResizable(false); // deshabilita la maximización
 		setTitle("ConverterONE - Inicio/Convertir Temperatura");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);
